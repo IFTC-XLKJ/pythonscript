@@ -21,6 +21,9 @@ const pys = (function () {
         run: function (code) {
             privateData.emit('start', code);
         },
+        /**
+         * 重置
+         */
         reset: function () {
             privateData.events = {};
         },
