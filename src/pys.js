@@ -1,3 +1,3 @@
 globalThis.pys = {}
-pys.properties.run = function() {
+pys.__proto__.run = function() {
 }
