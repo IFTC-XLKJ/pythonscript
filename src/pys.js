@@ -19,6 +19,10 @@ const pys = (function () {
          * @param {String} code 
          */
         run: function (code) {
+            privateData.emit('start', code);
+        },
+        reset: function () {
+            privateData.events = {};
         },
         /**
          * 监听事件
