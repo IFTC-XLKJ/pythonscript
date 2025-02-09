@@ -14,6 +14,27 @@ const pys = (function () {
     };
 
     return {
+        init: function () {
+            const classes = [
+                "Print"
+            ]
+            let scripts = []
+            for (let i = 0; i < classes.length; i++) {
+                const className = classes[i];
+                const script = document.createElement('script');
+                script.src = `./${className}.js`;
+                document.body.appendChild(script);
+                script.onload = function () {
+                    scripts.push(script);
+                    if (scripts.length === classes.length) {
+                        privateData.emit('ready');
+                    }
+                }
+                script.onerror = function () {
+                    console.error(`加载 ${className} 失败`);
+                }
+            }
+        },
         /**
          * 执行代码
          * @param {String} code 
