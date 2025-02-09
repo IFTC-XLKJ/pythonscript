@@ -14,7 +14,11 @@ const pys = (function () {
     };
 
     return {
-        run: function () {
+        /**
+         * 执行代码
+         * @param {String} code 
+         */
+        run: function (code) {
         },
         /**
          * 监听事件
