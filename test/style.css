@@ -1,0 +1,8 @@
+body {
+    margin: 0;
+}
+
+#textarea {
+    width: 100vw;
+    height: 100%;
+}
